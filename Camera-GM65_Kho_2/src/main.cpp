@@ -48,7 +48,7 @@ void reconnectMQTT() {
 
   while (!client.connected()) {
     Serial.print("Đang kết nối MQTT...");
-    if (client.connect("ESP32_Client_1", mqtt_user, mqtt_pass)) {
+    if (client.connect("ESP32_Client_2", mqtt_user, mqtt_pass)) {
       Serial.println("Đã kết nối MQTT!");
       client.subscribe("esp32_1/control");  // Nhận lệnh từ MQTT
     } else {
